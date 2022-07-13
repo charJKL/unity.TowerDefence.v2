@@ -48,7 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesInRange: {fileID: 6380721898443603238}
-  prefabProjectile: {fileID: 6379945040135341522, guid: ddd249f3f6b319f4eae90df0a07204b4, type: 3}
+  projectile: {fileID: 3627034843923976225, guid: ddd249f3f6b319f4eae90df0a07204b4, type: 3}
+  barrel: {fileID: 616616840827615115}
   rate: 0.5
 --- !u!1 &3359701164926060887
 GameObject:
@@ -74,7 +75,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3359701164926060887}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.487473, y: 2.416, z: -0.83341026}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

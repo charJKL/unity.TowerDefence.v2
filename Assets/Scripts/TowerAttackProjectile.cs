@@ -5,7 +5,8 @@ using UnityEngine;
 public class TowerAttackProjectile : MonoBehaviour
 {
 	[SerializeField] private TowerEnemiesInRange enemiesInRange;
-	[SerializeField] private GameObject prefabProjectile;
+	[SerializeField] private Projectile projectile;
+	[SerializeField] private Transform barrel;
 	[SerializeField] private float rate = 0.5f;
 	
 	private float timeout = 0;
@@ -21,7 +22,7 @@ public class TowerAttackProjectile : MonoBehaviour
 		{
 			if(enemiesInRange.IsSomeoneInRange())
 			{
-				Debug.Log("Attack one of the enemy");
+				projectile.Instantiate(barrel.position, enemiesInRange.Enemies[0]);
 				timeout = Time.time + rate;
 			}
 		}
