@@ -16,8 +16,9 @@ public class Projectile : MonoBehaviour
 	
 	private void LateUpdate()
 	{
-		Vector3 direction = target.position - transform.position;
+		Vector3 direction = (target.position - transform.position).normalized;
+		transform.rotation = Quaternion.LookRotation(direction, transform.up);
+		transform.position += direction * speed * Time.deltaTime;
 		Debug.DrawLine(target.position, transform.position, Color.green);
-		transform.position += direction.normalized * speed * Time.deltaTime;
 	}
 }
