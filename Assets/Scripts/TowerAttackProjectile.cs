@@ -22,7 +22,9 @@ public class TowerAttackProjectile : MonoBehaviour
 		{
 			if(enemiesInRange.IsSomeoneInRange())
 			{
-				projectile.Instantiate(barrel.position, enemiesInRange.Enemies[0]);
+				int randomTargetIndex = Random.Range(0, enemiesInRange.Enemies.Count);
+				Enemy enemy = enemiesInRange.Enemies[randomTargetIndex].GetComponent<Enemy>();
+				projectile.Init(barrel.position, enemy);
 				timeout = Time.time + rate;
 			}
 		}
