@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 514993360892843129}
   - component: {fileID: 6034021183074624926}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6334181259949773789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6, y: 0.5, z: 1.6}
+  m_LocalScale: {x: 1.6, y: 0.1, z: 1.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4048200940393481704}
@@ -93,7 +93,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4048200940393481704}
   - component: {fileID: 7252177367354483897}
-  m_Layer: 0
+  - component: {fileID: 7213501789248292372}
+  m_Layer: 9
   m_Name: Construction
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
@@ -129,3 +130,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7213501789248292372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7783327861001313163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f172845c8cbaa0a4b8128053ab4e949f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 6034021183074624926}
+  hover: {fileID: 2100000, guid: 1a41a624558dcf44ba94dbb05e0e7458, type: 2}

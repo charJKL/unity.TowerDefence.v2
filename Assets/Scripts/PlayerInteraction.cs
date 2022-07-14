@@ -12,7 +12,6 @@ public class PlayerInteraction : MonoBehaviour
 	{
 		Vector2 mousePosition = Mouse.current.position.ReadValue();
 		GameObject clicked = GetObjectUnderCursor(mousePosition);
-		Debug.Log($"Mouse clicked");
 		if(clicked)
 		{
 			Debug.Log($"Mouse was OnSelect {clicked.name}");
@@ -30,14 +29,14 @@ public class PlayerInteraction : MonoBehaviour
 		GameObject hover = GetObjectUnderCursor(mousePosition);
 		if(hover)
 		{
-			Debug.Log($"Mouse hover: {hover.name}");
+			// Debug.Log($"Mouse hover: {hover.name}");
 		}
 	}
 	
 	private GameObject GetObjectUnderCursor(Vector2 position)
 	{
 		ray = Camera.main.ScreenPointToRay(position);
-		if(Physics.Raycast(ray, out hit, float.MaxValue))
+		if(Physics.Raycast(ray, out hit, float.MaxValue, Layers.INTERACTABLE))
 		{
 			return hit.collider.gameObject;
 		}

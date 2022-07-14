@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5842895055891995538}
   - component: {fileID: 8395513956364827247}
-  m_Layer: 0
+  - component: {fileID: 3893930908858777001}
+  m_Layer: 9
   m_Name: Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,6 +52,20 @@ MonoBehaviour:
   projectile: {fileID: 3627034843923976225, guid: ddd249f3f6b319f4eae90df0a07204b4, type: 3}
   barrel: {fileID: 616616840827615115}
   rate: 0.5
+--- !u!136 &3893930908858777001
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282506770182617964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.53
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &3359701164926060887
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +167,6 @@ GameObject:
   - component: {fileID: 2174816577192873363}
   - component: {fileID: 2545306950765006027}
   - component: {fileID: 5650838587516406090}
-  - component: {fileID: 3882443580899323838}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -225,17 +239,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3882443580899323838
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9066939704449670146}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
