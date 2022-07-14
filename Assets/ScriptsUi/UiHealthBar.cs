@@ -5,19 +5,22 @@ using UnityEngine.UI;
 
 public class UiHealthBar : MonoBehaviour
 {
-	[SerializeField] private Slider slider;
-	[SerializeField] private Image fill;
+	[SerializeField] private Image bar;
 	[SerializeField] private Gradient gradient;
 	
+	private float min;
+	private float max;
+
 	public void Range(float min, float max)
 	{
-		slider.minValue = min;
-		slider.maxValue = max;
+		this.min = min;
+		this.max = max;
 	}
 	
 	public void Set(float value)
 	{
-		slider.value = value;
-		fill.color = gradient.Evaluate(slider.normalizedValue);
+		float normalizedValue = value / max;
+		bar.fillAmount = normalizedValue;
+		bar.color = gradient.Evaluate(normalizedValue);
 	}
 }
